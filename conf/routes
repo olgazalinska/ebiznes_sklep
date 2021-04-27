@@ -1,0 +1,85 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+#User
+GET     /user                       controllers.UserController.getUsers()
+GET     /user/:id                   controllers.UserController.getUser(id:Long)
+POST    /user/create                controllers.UserController.createUser()
+PUT     /user/update/:id/           controllers.UserController.updateUser(id:Long)
+DELETE  /user/delete/:id            controllers.UserController.deleteUser(id:Long)
+
+#Products
+GET     /products                   controllers.ProductsController.getProducts()
+GET     /products/:id               controllers.ProductsController.getProduct(id:Long)
+POST    /products/create            controllers.ProductsController.createProduct()
+PUT     /products/:id/              controllers.ProductsController.updateProduct(id:Long)
+DELETE  /products/delete/:id        controllers.ProductsController.deleteProduct(id:Long)
+
+#Categories
+GET     /categories                 controllers.CategoriesController.getCategories()
+GET     /categories/:id             controllers.CategoriesController.getCategory(id:Long)
+POST    /categories/create          controllers.CategoriesController.createCategory()
+PUT     /categories/:id/            controllers.CategoriesController.updateCategory(id:Long)
+DELETE  /categories/delete/:id      controllers.CategoriesController.deleteCategory(id:Long)
+
+#Subcategories
+GET     /subcategories               controllers.SubcategoriesController.getSubcategories()
+GET     /subcategories/:id           controllers.SubcategoriesController.getSubcategory(id:Long)
+POST    /subcategories/create        controllers.SubcategoriesController.createSubcategory()
+PUT     /subcategories/:id/          controllers.SubcategoriesController.updateSubcategory(id:Long)
+DELETE  /subcategories/delete/:id    controllers.SubcategoriesController.deleteSubcategory(id:Long)
+
+#ShoppingCart
+GET     /shopping-cart              controllers.ShoppingCartController.getShoppingCarts()
+GET     /shopping-cart/:id          controllers.ShoppingCartController.getShoppingCart(id:Long)
+POST    /shopping-cart/create       controllers.ShoppingCartController.createShoppingCart()
+PUT     /shopping-cart/:id/         controllers.ShoppingCartController.updateShoppingCart(id:Long)
+DELETE  /shopping-cart/delete/:id   controllers.ShoppingCartController.deleteShoppingCart(id:Long)
+
+#Order
+GET     /order                      controllers.OrderController.getOrders()
+GET     /order/:id                  controllers.OrderController.getOrder(id:Long)
+POST    /order/create               controllers.OrderController.createOrder()
+PUT     /order/:id/                 controllers.OrderController.updateOrder(id:Long)
+DELETE  /order/delete/:id           controllers.OrderController.deleteOrder(id:Long)
+
+#Promotions
+GET     /promotions                  controllers.PromotionsController.getPromotions()
+GET     /promotions/:id              controllers.PromotionsController.getPromotion(id:Long)
+POST    /promotions/create           controllers.PromotionsController.createPromotion()
+PUT     /promotions/:id/             controllers.PromotionsController.updatePromotion(id:Long)
+DELETE  /promotions/delete/:id       controllers.PromotionsController.deletePromotion(id:Long)
+
+#Transaction
+GET     /transaction                 controllers.TransactionController.getTransactions()
+GET     /transaction/:id             controllers.TransactionController.getTransaction(id:Long)
+POST    /transaction/create          controllers.TransactionController.createTransaction()
+PUT     /transaction/update/:id/     controllers.TransactionController.updateTransaction(id:Long)
+DELETE  /transaction/delete/:id      controllers.TransactionController.deleteTransaction(id:Long)
+
+#ClientCard
+GET     /client-card                  controllers.ClientCardController.getClientCards()
+GET     /client-card/:id              controllers.ClientCardController.getClientCard(id:Long)
+POST    /client-card/create           controllers.ClientCardController.createClientCard()
+PUT     /client-card/:id/             controllers.ClientCardController.updateClientCard(id:Long)
+DELETE  /client-card/delete/:id       controllers.ClientCardController.deleteClientCard(id:Long)
+
+#Voucher
+GET     /voucher                     controllers.VoucherController.getVouchers()
+GET     /voucher/:id                 controllers.VoucherController.getVoucher(id:Long)
+POST    /voucher/create              controllers.VoucherController.createVoucher()
+PUT     /voucher/update/:id/         controllers.VoucherController.updateVoucher(id:Long)
+DELETE  /voucher/delete/:id          controllers.VoucherController.deleteVoucher(id:Long)
